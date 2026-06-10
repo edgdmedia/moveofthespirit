@@ -268,16 +268,42 @@
     });
   }
 
-  function initEditionTabs() {
-    document.querySelectorAll('.edition-tab').forEach((tab) => {
-      tab.addEventListener('click', () => {
-        const edition = tab.getAttribute('data-edition');
-        document.querySelectorAll('.edition-tab').forEach((t) => t.classList.remove('active'));
-        tab.classList.add('active');
-        document.querySelectorAll('[data-testimony-edition]').forEach((panel) => {
-          panel.hidden = panel.getAttribute('data-testimony-edition') !== edition;
-        });
+  function initTestimonyCarousel() {
+    const track = document.getElementById('testimonyTrack');
+    const prevBtn = document.getElementById('testimonyPrev');
+    const nextBtn = document.getElementById('testimonyNext');
+    const dotsContainer = document.getElementById('testimonyDots');
+    if (!track) return;
+
+    const slides = track.querySelectorAll('.carousel-slide');
+    if (slides.length < 2) { prevBtn.style.display = 'none'; nextBtn.style.display = 'none'; return; }
+
+    let current = 0;
+
+    function goTo(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      current = index;
+      track.scrollTo({ left: slides[current].offsetLeft, behavior: 'smooth' });
+      document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === current);
       });
+    }
+
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to testimony ' + (i + 1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') goTo(current - 1);
+      if (e.key === 'ArrowRight') goTo(current + 1);
     });
   }
 
@@ -290,6 +316,6 @@
     initCalendarDropdowns();
     initCalendarButtons();
     initShareButtons();
-    initEditionTabs();
+    initTestimonyCarousel();
   });
 })();

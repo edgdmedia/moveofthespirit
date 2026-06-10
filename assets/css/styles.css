@@ -343,6 +343,7 @@
     display: inline-block;
     transition: all 0.3s;
     clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    text-wrap: nowrap;
   }
 
   .btn-primary:hover {
@@ -365,6 +366,7 @@
     display: inline-block;
     transition: all 0.3s;
     clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    text-wrap: nowrap;
   }
 
   .btn-outline:hover {
@@ -1385,34 +1387,159 @@
     position: relative;
   }
 
-  .testimony-card::before {
-    content: '"';
-    position: absolute;
-    top: 1rem; left: 1.5rem;
-    font-family: 'Cinzel', serif;
-    font-size: 4rem;
-    color: var(--fire);
-    opacity: 0.2;
-    line-height: 1;
+  /* ── TESTIMONY CAROUSEL ── */
+
+  .testimonies-carousel {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
   }
 
-  .testimony-text {
+  .carousel-track {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .slide-media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slide-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slide-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slide-media-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--muted);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .slide-media-placeholder .icon {
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.3;
+  }
+
+  .slide-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .slide-text .testimony-text {
     font-family: 'Libre Baskerville', serif;
     font-style: italic;
     font-size: 0.9rem;
     line-height: 1.8;
     color: var(--white);
     margin-bottom: 1.5rem;
-    padding-top: 1.5rem;
+    padding-top: 0;
   }
 
-  .testimony-author {
+  .slide-text .testimony-author {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 600;
     font-size: 0.75rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--fire-gold);
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid var(--border);
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: background 0.2s;
+  }
+
+  .carousel-btn:hover {
+    background: var(--fire);
+    border-color: var(--fire);
+  }
+
+  .carousel-prev { left: -0.5rem; }
+  .carousel-next { right: -0.5rem; }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 0;
+  }
+
+  .carousel-dot.active {
+    background: var(--fire);
+    border-color: var(--fire);
+  }
+
+  @media (min-width: 768px) {
+    .carousel-slide {
+      flex-direction: row;
+    }
+    .slide-media {
+      flex: 1;
+      aspect-ratio: auto;
+      min-height: 200px;
+    }
+    .slide-text {
+      flex: 1;
+    }
+    .carousel-prev { left: -3rem; }
+    .carousel-next { right: -3rem; }
   }
 
   .testimony-cta {
@@ -1526,6 +1653,18 @@
     content: '→';
     color: var(--fire-bright);
     font-size: 0.8rem;
+  }
+
+  .live-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    .live-btns {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* ── GIVE ── */
