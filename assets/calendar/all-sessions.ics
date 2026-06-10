@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Noble House Christian Centre//HGM 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hgm-sunday-aug2-2026@noblehousecc.org
+DTSTAMP:20260606T120000Z
+DTSTART:20260802T073000Z
+DTEND:20260802T113000Z
+SUMMARY:Holyghost Meeting — Sunday Session
+DESCRIPTION:The Move of the Spirit 2026. Livestream: https://noblehousechristiancentre.mixlr.com/
+LOCATION:Noble House Christian Centre, GreenHall 5, Taiwo Shitta Street, Iju, Lagos
+END:VEVENT
+BEGIN:VEVENT
+UID:hgm-sunday-aug9-2026@noblehousecc.org
+DTSTAMP:20260606T120000Z
+DTSTART:20260809T073000Z
+DTEND:20260809T113000Z
+SUMMARY:Holyghost Meeting — Sunday Session
+DESCRIPTION:The Move of the Spirit 2026. Livestream: https://noblehousechristiancentre.mixlr.com/
+LOCATION:Noble House Christian Centre, GreenHall 5, Taiwo Shitta Street, Iju, Lagos
+END:VEVENT
+BEGIN:VEVENT
+UID:hgm-sunday-aug16-2026@noblehousecc.org
+DTSTAMP:20260606T120000Z
+DTSTART:20260816T073000Z
+DTEND:20260816T113000Z
+SUMMARY:Holyghost Meeting — Sunday Session
+DESCRIPTION:The Move of the Spirit 2026. Livestream: https://noblehousechristiancentre.mixlr.com/
+LOCATION:Noble House Christian Centre, GreenHall 5, Taiwo Shitta Street, Iju, Lagos
+END:VEVENT
+BEGIN:VEVENT
+UID:hgm-sunday-aug23-2026@noblehousecc.org
+DTSTAMP:20260606T120000Z
+DTSTART:20260823T073000Z
+DTEND:20260823T113000Z
+SUMMARY:Holyghost Meeting — Sunday Session
+DESCRIPTION:The Move of the Spirit 2026. Livestream: https://noblehousechristiancentre.mixlr.com/
+LOCATION:Noble House Christian Centre, GreenHall 5, Taiwo Shitta Street, Iju, Lagos
+END:VEVENT
+BEGIN:VEVENT
+UID:hgm-sunday-aug30-2026@noblehousecc.org
+DTSTAMP:20260606T120000Z
+DTSTART:20260830T073000Z
+DTEND:20260830T113000Z
+SUMMARY:Holyghost Meeting — Sunday Session
+DESCRIPTION:The Move of the Spirit 2026. Livestream: https://noblehousechristiancentre.mixlr.com/
+LOCATION:Noble House Christian Centre, GreenHall 5, Taiwo Shitta Street, Iju, Lagos
+END:VEVENT
+BEGIN:VEVENT
+UID:hgm-friday-aug28-2026@noblehousecc.org
+DTSTAMP:20260606T120000Z
+DTSTART:20260828T170000Z
+DTEND:20260828T210000Z
+SUMMARY:Holyghost Meeting — Special Weekend (Friday)
+DESCRIPTION:The Move of the Spirit 2026 Special Weekend. Livestream: https://noblehousechristiancentre.mixlr.com/
+LOCATION:The Charis Event Centre, Etal Avenue, Ikeja, Lagos
+END:VEVENT
+BEGIN:VEVENT
+UID:hgm-saturday-aug29-morning-2026@noblehousecc.org
+DTSTAMP:20260606T120000Z
+DTSTART:20260829T080000Z
+DTEND:20260829T120000Z
+SUMMARY:Holyghost Meeting — Special Weekend (Saturday Morning)
+DESCRIPTION:The Move of the Spirit 2026 Special Weekend. Livestream: https://noblehousechristiancentre.mixlr.com/
+LOCATION:The Charis Event Centre, Etal Avenue, Ikeja, Lagos
+END:VEVENT
+BEGIN:VEVENT
+UID:hgm-saturday-aug29-afternoon-2026@noblehousecc.org
+DTSTAMP:20260606T120000Z
+DTSTART:20260829T120000Z
+DTEND:20260829T160000Z
+SUMMARY:Holyghost Meeting — Special Weekend (Saturday Afternoon)
+DESCRIPTION:The Move of the Spirit 2026 Special Weekend. Livestream: https://noblehousechristiancentre.mixlr.com/
+LOCATION:The Charis Event Centre, Etal Avenue, Ikeja, Lagos
+END:VEVENT
+BEGIN:VEVENT
+UID:hgm-saturday-aug29-evening-2026@noblehousecc.org
+DTSTAMP:20260606T120000Z
+DTSTART:20260829T160000Z
+DTEND:20260829T200000Z
+SUMMARY:Holyghost Meeting — Special Weekend (Saturday Evening)
+DESCRIPTION:The Move of the Spirit 2026 Special Weekend. Livestream: https://noblehousechristiancentre.mixlr.com/
+LOCATION:The Charis Event Centre, Etal Avenue, Ikeja, Lagos
+END:VEVENT
+BEGIN:VEVENT
+UID:hgm-closing-aug31-2026@noblehousecc.org
+DTSTAMP:20260606T120000Z
+DTSTART:20260831T073000Z
+DTEND:20260831T113000Z
+SUMMARY:Holyghost Meeting — Closing Sunday
+DESCRIPTION:The Move of the Spirit 2026 closing session. Livestream: https://noblehousechristiancentre.mixlr.com/
+LOCATION:Noble House Christian Centre, GreenHall 5, Iju, Lagos
+END:VEVENT
+END:VCALENDAR
