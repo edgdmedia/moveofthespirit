@@ -268,6 +268,76 @@
     });
   }
 
+  function initGalleryCarousel() {
+    const track = document.getElementById('galleryTrack');
+    const prevBtn = document.getElementById('galleryPrev');
+    const nextBtn = document.getElementById('galleryNext');
+    if (!track) return;
+    const items = track.querySelectorAll('.gallery-carousel-item');
+    if (items.length < 2) { if (prevBtn) prevBtn.style.display = 'none'; if (nextBtn) nextBtn.style.display = 'none'; return; }
+
+    function scroll(direction) {
+      const itemW = items[0].offsetWidth + 12;
+      track.scrollBy({ left: direction * itemW, behavior: 'smooth' });
+    }
+
+    prevBtn.addEventListener('click', () => scroll(-1));
+    nextBtn.addEventListener('click', () => scroll(1));
+  }
+
+  function initLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('lightboxClose');
+    const prevBtn = document.getElementById('lightboxPrev');
+    const nextBtn = document.getElementById('lightboxNext');
+    if (!lightbox) return;
+
+    const items = document.querySelectorAll('.gallery-carousel-item img');
+    let currentIndex = 0;
+
+    function open(index) {
+      currentIndex = index;
+      img.src = items[currentIndex].src;
+      lightbox.removeAttribute('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+      lightbox.hidden = true;
+      document.body.style.overflow = '';
+    }
+
+    function prev() {
+      currentIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
+      img.src = items[currentIndex].src;
+    }
+
+    function next() {
+      currentIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
+      img.src = items[currentIndex].src;
+    }
+
+    items.forEach((item, i) => {
+      item.parentElement.addEventListener('click', () => open(i));
+    });
+
+    closeBtn.addEventListener('click', close);
+    prevBtn.addEventListener('click', prev);
+    nextBtn.addEventListener('click', next);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) close();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.hidden) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key === 'ArrowRight') next();
+    });
+  }
+
   function initTestimonyCarousel() {
     const track = document.getElementById('testimonyTrack');
     const prevBtn = document.getElementById('testimonyPrev');
@@ -317,5 +387,7 @@
     initCalendarButtons();
     initShareButtons();
     initTestimonyCarousel();
+    initGalleryCarousel();
+    initLightbox();
   });
 })();

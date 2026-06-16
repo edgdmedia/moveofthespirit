@@ -421,15 +421,31 @@
     </div>
 
     <p class="section-label" style="margin-top:2rem;">Photo Gallery</p>
-    <div class="gallery-grid">
-      <div class="gallery-item"><div class="gallery-placeholder"><svg class="icon" aria-hidden="true"><use href="#icon-image"></use></svg> Aug 2025</div></div>
-      <div class="gallery-item"><div class="gallery-placeholder"><svg class="icon" aria-hidden="true"><use href="#icon-image"></use></svg> Aug 2025</div></div>
-      <div class="gallery-item"><div class="gallery-placeholder"><svg class="icon" aria-hidden="true"><use href="#icon-image"></use></svg> Jan 2026</div></div>
-      <div class="gallery-item"><div class="gallery-placeholder"><svg class="icon" aria-hidden="true"><use href="#icon-image"></use></svg> Jan 2026</div></div>
-      <div class="gallery-item"><div class="gallery-placeholder"><svg class="icon" aria-hidden="true"><use href="#icon-image"></use></svg> Add Photo</div></div>
+    <div class="gallery-carousel">
+      <div class="gallery-track" id="galleryTrack">
+        <div class="gallery-carousel-item"><img src="assets/images/gallery/1.jpeg" alt="Gallery 1" loading="lazy"></div>
+        <div class="gallery-carousel-item"><img src="assets/images/gallery/2.jpeg" alt="Gallery 2" loading="lazy"></div>
+        <div class="gallery-carousel-item"><img src="assets/images/gallery/3.jpeg" alt="Gallery 3" loading="lazy"></div>
+        <div class="gallery-carousel-item"><img src="assets/images/gallery/4.jpeg" alt="Gallery 4" loading="lazy"></div>
+        <div class="gallery-carousel-item"><img src="assets/images/gallery/5.jpeg" alt="Gallery 5" loading="lazy"></div>
+        <div class="gallery-carousel-item"><img src="assets/images/gallery/6.jpeg" alt="Gallery 6" loading="lazy"></div>
+        <div class="gallery-carousel-item"><img src="assets/images/gallery/7.jpeg" alt="Gallery 7" loading="lazy"></div>
+        <div class="gallery-carousel-item"><img src="assets/images/gallery/8.jpeg" alt="Gallery 8" loading="lazy"></div>
+        <div class="gallery-carousel-item"><img src="assets/images/gallery/9.jpeg" alt="Gallery 9" loading="lazy"></div>
+        <div class="gallery-carousel-item"><img src="assets/images/gallery/10.jpeg" alt="Gallery 10" loading="lazy"></div>
+      </div>
+      <button class="gallery-carousel-btn gallery-carousel-prev" id="galleryPrev" aria-label="Previous">‹</button>
+      <button class="gallery-carousel-btn gallery-carousel-next" id="galleryNext" aria-label="Next">›</button>
     </div>
   </div>
 </section>
+
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+  <button class="lightbox-btn lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <button class="lightbox-btn lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+</div>
 
 <div class="divider"></div>
 
