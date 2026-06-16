@@ -299,12 +299,12 @@
     function open(index) {
       currentIndex = index;
       img.src = items[currentIndex].src;
-      lightbox.removeAttribute('hidden');
+      lightbox.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
 
     function close() {
-      lightbox.hidden = true;
+      lightbox.classList.remove('open');
       document.body.style.overflow = '';
     }
 
@@ -331,7 +331,7 @@
     });
 
     document.addEventListener('keydown', (e) => {
-      if (lightbox.hidden) return;
+      if (!lightbox.classList.contains('open')) return;
       if (e.key === 'Escape') close();
       if (e.key === 'ArrowLeft') prev();
       if (e.key === 'ArrowRight') next();
